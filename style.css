@@ -1,0 +1,440 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* display: flex; */
+    /* justify-content: center; */
+    padding: 10%;
+    font-family: "Kanit", sans-serif;
+    background-color: #E4FBFF;
+
+}
+h1{
+    text-align: center;
+    font-weight: 500;
+    background: rgb(180,58,58);
+    background: linear-gradient(129deg, rgb(76, 73, 255) 0%, rgb(219, 58, 255)50%,  rgb(255, 26, 26) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.outer-box{
+    max-width: 100%;
+    /* padding: 50px; */
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #AED2FF;
+    border-radius: 10px;
+}
+
+.bt1 a{
+    position: relative;
+    background-color: white;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+.bt1 a:hover{
+    background: var(--bg1);
+    color: var(--bg1);
+    letter-spacing: 0.2rem;
+    box-shadow: 0 0 35px var(--bg1);
+}
+.bt1 a::before{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background-color: #0F0F0F;
+}
+.bt1 a span{
+    position: relative;
+    z-index: 1;
+}
+.bt1 a i{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+.bt1 a i::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background: #0F0F0F;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+.bt1 a:hover i::before{
+    width: 20px;
+    left: 20%;
+}
+.bt1 a i::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    height: 4px;
+    background: #0F0F0F;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+.bt1 a:hover i::after{
+    width: 20px;
+    left: 80%;
+}
+/* button 2 */
+.bt2 a{
+    position: relative;
+    background-color: white;
+    color: #FFBB64;
+    border: 1px solid #FFBB64;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    padding: 10px 30px;
+    transition: 0.5s;
+    overflow: hidden;
+
+}
+.bt2 a:hover{
+    color: white;
+    letter-spacing: 0.2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.229);
+}
+.bt2 a::before{
+    content: '';
+    position: absolute;
+    background-color: #FFBB64;
+    width: 100%;
+    height: 0%;
+    left: 0;
+    bottom: 0;
+    transition: all 0.5s;
+}
+.bt2 a:hover::before{
+    height: 100%;
+}
+
+
+.bt2 a span{
+    position: relative;
+    z-index: 1;
+}
+
+/* button 3 */
+.bt3 a{
+    position: relative;
+    padding: 10px 30px;
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+}
+.bt3 a span{
+    position: relative;
+    z-index: 1;
+    color: black;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+
+}
+.bt3 a .water{
+    position: absolute;
+    left: 0;
+    top: -80%;
+    width: 100%;
+    height: 300%;
+    background: #3fb5ff;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.344);
+    transition: 0.5s;
+
+}
+.bt3 a:hover .water{
+    top: -160%;
+
+}
+
+.bt3 a .water::before,
+.bt3 a .water::after{
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-75%);
+    background: #ffffff;
+}
+.bt3 a .water::before{
+    border-radius: 45%;
+    background: rgb(255, 255, 255);
+    animation: waterflow 5s linear infinite;
+}
+.bt3 a .water::after{
+    border-radius: 40%;
+    background: rgba(255, 255, 255, 0.5);
+    animation: waterflow 10s linear infinite;
+
+}
+@keyframes waterflow{
+    0%{
+        transform: translate(-50%,-75%) rotate(0deg);
+
+    }
+    100%{
+        transform: translate(-50%,-75%) rotate(360deg);
+
+    }
+}
+
+/* button 4 */
+.bt4 a{
+    position: relative;
+    padding: 10px 30px;
+    background-color: white;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px black;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.bt4 a span{
+    color: black;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.bt4 a:hover{
+    box-shadow: none;
+    background-color: black;
+
+}
+.bt4 a:hover span{
+    color: white;
+    font-weight: 500;
+}
+
+/* button 5 */
+.bt5 a{
+   padding: 10px 30px;
+   text-decoration: none;
+   border-radius: 10px;
+   font-size: 1rem;
+   letter-spacing: 0.1rem;
+   border: 2px solid #00d7cc;
+   position: relative;
+   overflow: hidden;
+   z-index: 1;
+
+}
+.bt5 a span{
+   color: black;
+
+}
+.bt5 a:hover span{
+    color: white;
+    transition: 0.5s ease;
+ 
+ }
+
+.bt5 a::before{
+    content: '';
+    background-color: #00d7cc;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    opacity: 0;
+    transition: 0.5s ease;
+    z-index: -1;
+}
+
+.bt5 a:hover::before{
+    opacity: 1;
+    left: 0;
+    right: 0;
+}
+
+/* button 6 */
+.bt6 a{
+    position: relative;
+    width: 120px;
+    height: 45px;
+    /* padding: 10px 30px; */
+    background-color: black;
+    text-decoration: none;
+    /* color: white; */
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bt6 a span{
+    color: white;
+    display: flex;
+}
+
+.bt6 a span::after{
+    content: "\2192";
+    margin-left: 0;
+    width: 0px;
+    overflow: hidden;
+    transition: 0.5s all ease;
+
+}
+.bt6 a:hover span::after{
+    margin-left: 5px;
+    width: 20px;
+
+}
+
+
+
+/* button 7 */
+.bt7 a{
+    position: relative;
+    padding: 10px 30px;
+    background-color: rgb(0, 110, 255);
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    transition: 0.5s ease;
+}
+.bt7 a {
+    box-shadow: 0px 0px 0 rgb(0, 110, 255);
+}
+.bt7 a:hover {
+    box-shadow: 5px 7px 0 rgb(0, 255, 187);
+}
+
+
+/* button 8 */
+.bt8 a{
+    position: relative;
+    padding: 10px 30px;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    transition: 0.5s;
+}
+.bt8 a:hover{
+    background: transparent;
+    border: 2px solid black;
+    padding-top: 15px;
+    color: black;
+
+}
+
+.bt8 a::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    transition: top 0.5s, left 0.5s;
+}
+.bt8 a:hover::after{
+    top: 5px;
+    left: 5px;
+    box-sizing: content-box;
+}
+
+/* button 9 */
+.bt9 a{
+    position: relative;
+    padding: 10px 30px;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    transition: 0.2s;
+}
+
+.bt9 a:hover{
+    background: transparent;
+    color: black;
+}
+.bt9 a::before, .bt9 a::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    transition: top 0.5s, left 0.5s;
+    z-index: -1;
+}
+.bt9 a::before{
+    border-left:2px solid black ;
+    border-top:2px solid black ;
+
+}
+.bt9 a::after{
+    border-right:2px solid black ;
+    border-bottom:2px solid black ;
+
+}
+.bt9 a:hover:before{
+    top: -5px;
+    left: -15px;
+}
+.bt9 a:hover::after{
+    top: 5px;
+    left: 15px;
+}
+
+/* button 10 */
+.bt10 a{
+    position: relative;
+    padding: 10px 30px;
+    border: 2px solid #fbbb09;
+    color: #fbbb09;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    transition: 0.5s all ease-in-out;
+}
+
+.bt10 a:hover{
+    color: black;
+}
+.bt10 a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: unset;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #fbbb09;
+    z-index: -1;
+    transition: 0.5s all ease-in-out;
+}
+.bt10 a:hover::before{
+    width: 100%;
+    right: unset;
+    left: 0;
+}
